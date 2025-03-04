@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - REDIS_HOST=redis-11976.fcrce180.us-east-1-1.ec2.redns.redis-cloud.com
+      - REDIS_PORT=11976
+      - REDIS_PASSWORD=HEtexet6DvQSvOCXV0GiCfyXMa0hCLMe
+    restart: unless-stopped
